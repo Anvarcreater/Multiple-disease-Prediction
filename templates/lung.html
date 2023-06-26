@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <style>
+        h2{
+            font-size:3vmax;
+            color:rgb(232, 22, 232);
+            font-style:oblique;
+            text-align:center;
+        }
+        .field{
+            display:flex;
+            justify-content:center;
+        }
+        select{
+            width:300px;
+            height:30px;
+        }
+        .set{
+            width:50vw;
+            display:flex;
+            justify-content:center;
+            background-image:linear-gradient(to right,red,yellow);
+        }
+        .btn{
+            border-radius:30px;
+            color:black;
+            background-color:cyan;
+        }
+        #r1{
+            font-size:3vmax;
+            font-style:oblique;
+            font-family:Georgia;
+            color:rgb(20, 215, 20);
+            text-align:center;
+        }
+        #r2{
+            font-size:3vmax;
+            font-style:oblique;
+            font-family:Georgia;
+            color:orangered;
+            text-align:center;
+        }
+        .btn2{
+            border-radius:30px;
+            color:black;
+            background-color:lightgreen;
+            width:60px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Lung Tumor Prediction</h2>
+    <div class="field">
+        <fieldset class="set">
+        <form action="/result2" method="post">
+        <select  name="an" >
+            <option value="" disabled selected hidden>Anxiety</option>
+            <option value="1">yes</option>
+            <option value="0">no</option>
+        </select><br><br>
+        <select  name="yellow" >
+            <option value="" disabled selected hidden>Yellow Fingers</option>
+            <option value="1">yes </option>
+            <option value="0">no</option>
+        </select><br><br>
+        <select  name="peer" >
+            <option value="" disabled selected hidden>Peer Pressure</option>
+            <option value="1">yes</option>
+            <option value="0">no</option>
+        </select> <br><br>
+        <select name="ch">
+            <option value=""disabled selected hidden>Chronic Disease</option>
+            <option value="1">yes</option>
+            <option value="0">no</option>
+        </select> <br><br>
+        
+        <select  name="wh" >
+            <option value=""disabled selected hidden >Wheezing</option>
+            <option value="1">yes</option>
+            <option value="0">no</option>
+        </select> <br><br>
+        
+        <select  name="coug" >
+            <option value=""disabled selected hidden >Coughing</option>
+            <option value="1">yes</option>
+            <option value="0">no</option>
+        </select> <br><br>
+        <select  name="sob" >
+            <option value=""disabled selected hidden >Shortness Of Breath</option>
+            <option value="1">yes</option>
+            <option value="0">no</option>
+        </select> <br><br>
+        <select  name="shaw" >
+            <option value=""disabled selected hidden >Swallowing Difficulty</option>
+            <option value="1">yes</option>
+            <option value="0">no</option>
+        </select> <br><br>
+        <select  name="cp" >
+            <option value=""disabled selected hidden >Chest Pain</option>
+            <option value="1">yes</option>
+            <option value="0">no</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Predict" class="btn"/><br><br>
+        <input type="reset" name="reset" value="clear" class="btn2"/>
+    </form>
+    </fieldset>
+    </div><br><br>
+    <p id="r1">{{items}}</p>
+    <p id="r2">{{item}}</p>
+    
+</body>
+</html>

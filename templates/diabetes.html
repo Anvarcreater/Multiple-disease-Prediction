@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <style>
+        h2{
+            font-size:3vmax;
+            color:rgba(255, 136, 0, 0.762);
+            font-style:oblique;
+            text-align:center;
+        }
+        .field{
+            display:flex;
+            justify-content:center;
+        }
+        select{
+            width:300px;
+            height:30px;
+        }
+        .set{
+            width:50vw;
+            display:flex;
+            justify-content:center;
+            background-image:linear-gradient(to right,rgb(0, 183, 255),rgb(255, 0, 170));
+        }
+        .btn{
+            border-radius:30px;
+            color:black;
+            background-color:gold;
+        }
+        #num{
+            width:300px;
+            height:30px;
+        }
+        .btn2{
+            border-radius:30px;
+            width:60px;
+            background-color:lightgreen;
+            color:black;
+        }
+        #res1{
+            font-size:3vmax;
+            font-style:oblique;
+            font-family:Georgia;
+            color:rgb(20, 215, 20);
+            text-align:center;
+        }
+        #res2{
+            font-size:3vmax;
+            font-style:oblique;
+            font-family:Georgia;
+            color:orangered;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Diabetes Prediction</h2>
+    <div class="field">
+        <fieldset class="set">
+            <form action="/result3" method="post">
+                <select name="preg">
+                    <option value="" disabled selected hidden>Pregnancies</option>
+                    <option value="0">0</option>
+                    <option value="10">above 5</option>
+                    <option value="2">below 5</option>
+                    <option value="15">above 10</option>
+                </select><br><br>
+                <select name="glucose">
+                    <option value="" disabled selected hidden>Glucose</option>
+                    <option value="85">less than 120</option>
+                    <option value="148">greater than 120</option>
+                </select><br><br>
+                <select name="BP">
+                    <option value="" disabled selected hidden>Blood Pressure</option>
+                    <option value="66">less than 70</option>
+                    <option value="96">greater than 75</option>
+                </select><br><br>
+                <select name="Skin">
+                    <option value="" disabled selected hidden>Skinthickness</option>
+                    <option value="0">0</option>
+                    <option value="29">less than 30</option>
+                    <option value="35">greater than 30</option>
+                </select><br><br>
+                <select name="insulin">
+                    <option value="" disabled selected hidden>Insulin</option>
+                    <option value="0">0</option>
+                    <option value="88">less than 100</option>
+                    <option value="543">greater than 100</option>
+                </select><br><br>
+                <select name="bmi">
+                    <option value="" disabled selected hidden>BMI</option>
+                    <option value="43.1">above 35.3</option>
+                    <option value="26.6">less than 35</option>
+                </select><br><br>
+                <select name="diabetes">
+                    <option value="" disabled selected hidden>DiabetesPedigreeFunction</option>
+                    <option value="0.351">less than equal to 0.351</option>
+                    <option value="0.627">greater than equal to 0.351</option>
+                    <option value="2.288">greater than equal to 2.288</option>
+                </select><br><br>
+                <input type="number" id="num" name="num" placeholder="Enter a Age"/><br><br>
+                <input type="submit" value="predict" class="btn"/><br><br>
+                <input type="reset" value="clear" class="btn2"/>
+            </form>
+        </fieldset>
+    </div><br>
+    <p id="res2">{{items}}</p>
+    <p id="res1">{{item}}</p>
+</body>
+</html>

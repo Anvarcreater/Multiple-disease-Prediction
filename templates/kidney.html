@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prediction</title>
+    <style>
+        h2{
+            color:orangered;
+            font-size:3vmax;
+            text-align:center;
+        }
+        .field{
+            display:flex;
+            justify-content:center;
+        }
+        .set{
+            background-image:linear-gradient(to right,orange,rgb(250, 250, 68));
+            width:50vw;
+            display:flex;
+            justify-content:center;
+        }
+        select{
+            width:300px;
+            height:30px;
+        }
+        .btn{
+            border-radius:30px;
+            color:whitesmoke;
+            background-color:orangered;
+        }
+        .btn2{
+            border-radius:30px;
+            color:black;
+            background-color:lightgreen;
+            width:50px;
+        }
+        #h1{
+            font-size:3vmax;
+            font-style:oblique;
+            font-family:Georgia;
+            color:rgb(28, 223, 28);
+            text-align:center;
+        }
+        #h2{
+            font-size:3vmax;
+            font-style:oblique;
+            font-family:Georgia;
+            color:orangered;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="predict">
+        <h2>ChronicKidney Disease Prediction</h2>
+        <div class="field">
+            <fieldset class="set">
+            <form action="/result1" method="post">
+               <select name="blood_urea" required>
+                    <option value="" disabled selected hidden>select blood_urea level..</option>
+                    <option value="16">above 15</option>
+                    <option value="12">less than equal to 15</option>
+               </select><br><br>
+               <select name="blood_glucose_random" required>
+                    <option value="" disabled selected hidden>select blood_glucose_random level..</option>
+                    <option value="130">above 125</option>
+                    <option value="120">less than equal to 125</option>
+               </select><br><br>
+                <select  name="coronary_artery_disease" required>
+                    <option value="" disabled selected hidden>select coronary artery desease or not..</option>
+                    <option value="1">yes</option>
+                    <option value="0">no</option>
+                </select><br><br>
+                <select  name="anemia" required>
+                    <option value="" disabled selected hidden>select anemia or not..</option>
+                    <option value="1">yes</option>
+                    <option value="0">no</option>
+                </select><br><br>
+                <select  name="pus_cell"required>
+                    <option value="" disabled selected hidden>select pus_cell or not..</option>
+                    <option value="1">yes</option>
+                    <option value="0">no</option>
+                </select><br><br>
+                <select  name="red_blood_cells"required>
+                    <option value="" disabled selected hidden>select red_blood_cells level normal or not..</option>
+                    <option value="1">abnormal</option>
+                    <option value="0">Normal</option>
+                </select><br><br>
+                <select  name="diabetesmellitus"required>
+                    <option value="" disabled selected hidden>select diabetesmellitus or not..</option>
+                    <option value="1">yes</option>
+                    <option value="0">no</option>
+                </select><br><br>
+                <select  name="pedal_edema"required>
+                    <option value="" disabled selected hidden>select pedal edema or not..</option>
+                    <option value="1">yes</option>
+                    <option value="0">no</option>
+                </select><br><br>
+                <input type="submit" value="Predict" class="btn"/><br><br>
+                <input type="reset" name="reset" value="clear" class="btn2"/>
+            </form>
+            </fieldset>
+        </div><br><br><br>
+        <h1 id="h1">{{item}}</h1>
+        <h1 id="h2">{{items}}</h1>
+    </div>
+</body>
+</html>

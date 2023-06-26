@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prediction</title>
+    <style>
+        body{
+            background-image:linear-gradient(to right,red,orange,orangered);
+        }
+        .img{
+            width:200px;
+            height:200px;
+        }
+        h2{
+            font-size:6vmin;
+            color:ghostwhite;
+            font-style:italic;
+            font-family:verdana;
+            text-align:center;
+        }
+        .pred{
+            display:flex;
+            flex-wrap:wrap;
+            gap:20px;
+            align-items:center;
+            justify-content:center;
+        }
+        #text{
+            font-size:25px;
+            color:whitesmoke;
+        }
+        .img:hover{
+            transform:scale(1.1,1.1);
+        }
+    </style>
+</head>
+<body>
+    <h2>Disease Prediction</h2>
+    <div class="pred">
+        <div>
+            <a href="/kidney"><img src="static/kidney.jpg" alt="img" class="img"></a>
+            <p id="text">chronickidney disease</p>
+        </div>
+        <div>
+            <a href="/lung"><img src="static/lung.jpg" alt="img" class="img"></a>
+            <p id="text">Lung Tumor</p>
+        </div>
+        <div>
+            <a href="/diabetes"><img src="static/diabetes.jpg" alt="img" class="img"></a>
+            <p id="text">Diabetes</p>
+        </div>
+    </div>
+</body>
+</html>

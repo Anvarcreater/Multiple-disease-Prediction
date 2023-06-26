@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>home page</title>
+        <style>
+            .head{
+                width:auto;
+                height:100vh;
+                background-image:linear-gradient(to right,cyan,blue);
+            
+            }
+            li{
+                list-style:none;
+            }
+            ul{
+                display:flex;
+                gap:20px;
+            }
+            .na{
+                text-decoration:none;
+                font-size:25px;
+                color:whitesmoke;
+                font-style:oblique;
+            }
+            #nav{
+                display:flex;
+                justify-content:right;
+                margin-right:30px;
+            }
+            .title{
+                display:flex;
+                flex-wrap: wrap;
+                justify-content:space-evenly;
+            }
+            .img{
+                height:65vh;
+                width:30vw;
+                border-radius:360%;
+            }
+            .h2{
+                color:whitesmoke;
+                font-size:10vmin;
+                font-style: oblique;
+                user-select: none;
+            }
+            .na:hover{
+                color:darkorange;
+                cursor:pointer;
+            }
+            .heading{
+                justify-content:center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="head">
+            <nav id="nav">
+                <ul>
+                    <li><a href="/home" class="na">Home</a></li>
+                    <li><a href="/predict" class="na">Prediction</a></li>
+                </ul>
+            </nav>
+            <div class="title">
+                <img src="static/doctor.jpg" alt="img" class="img"/>
+                <div class="heading">
+                    <h2 class="h2">Multiple</h2>
+                    <h2 class="h2">Disease Predictor</h2>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <h2>About us:</h2>
+            <p></p>
+        </div>
+    </body>
+</html>
